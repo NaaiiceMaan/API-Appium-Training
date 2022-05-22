@@ -39,7 +39,7 @@ public class BuyOrderPOM {
 	@CacheLookup
 	public static WebElement loginbtn;
 	
-	@FindBy(how = How.CSS, using=".sfHover>.sf-with-ul")
+	@FindBy(how = How.XPATH, using="/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/a")
 	@CacheLookup
 	public static WebElement womentab;
 	
@@ -51,7 +51,7 @@ public class BuyOrderPOM {
 	@CacheLookup
 	public static WebElement product;
 	
-	@FindBy(how = How.CSS, using="link_view>span")
+	@FindBy(how = How.XPATH, using="/html/body/div/div[2]/div/div[3]/div[2]/ul/li/div/div[2]/div[2]/a[2]")
 	@CacheLookup
 	public static WebElement morebtn;
 	
@@ -116,6 +116,7 @@ public class BuyOrderPOM {
 		bop.totshirtpage();
 		bop.toaddtocart();
 		bop.proceedcheckout();
+		driver.quit();
 		
 	}
 }
